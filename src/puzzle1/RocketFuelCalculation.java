@@ -1,4 +1,4 @@
-package Puzzle1;
+package puzzle1;
 
 import java.util.Arrays;
 import java.util.List;
