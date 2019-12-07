@@ -1,6 +1,7 @@
 import puzzle1.RocketFuelCalculation;
 import puzzle2.GravityAssistProgram;
 import puzzle3.CrossedWires;
+import puzzle4.SecureContainer;
 
 public class Main {
 
@@ -13,5 +14,6 @@ public class Main {
         CrossedWires crossedWires = new CrossedWires();
         System.out.println("Manhattan distance from the central port to the closest intersection: " + crossedWires.calculateManhattanDistance());
         System.out.println("Fewest combined steps the wires must take to reach an intersection: " + crossedWires.calculateFewestCombinedStepsToReachIntersection());
+        System.out.println("Total different passwords that meet Secured Container password criteria: " + new SecureContainer().getNumberOfDifferentPasswords(193651, 649729));
     }
 }
