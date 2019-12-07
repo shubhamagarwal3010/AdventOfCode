@@ -7,6 +7,7 @@ public class Main {
 
         System.out.println("Total Fuel required on spacecraft: " + new RocketFuelCalculation().getTotalFuel());
         System.out.println("Total Fuel required on spacecraft including mass of fuel: " + new RocketFuelCalculation().getTotalFuelIncludingMassOfFuel());
-        System.out.println("Gravity assist program result: " + new GravityAssistProgram().getResultWithFixedCorrectionData());
+        System.out.println("Gravity assist program result for fixed correction value: " + new GravityAssistProgram().getResultWithCorrectionData(12, 2));
+        System.out.println("Gravity assist program noun verb result: " + new GravityAssistProgram().getNounVerbResultWhichProducesOutput(19690720));
     }
 }
