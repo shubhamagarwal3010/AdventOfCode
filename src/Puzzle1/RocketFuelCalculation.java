@@ -6,6 +6,7 @@ import java.util.List;
 public class RocketFuelCalculation {
 
 
+    private List<Integer> input2 = Arrays.asList(1969);
     private List<Integer> input = Arrays.asList(
             148216,
             142030,
@@ -110,9 +111,21 @@ public class RocketFuelCalculation {
 
     public int getTotalFuel() {
         int totalFuel = 0;
-        RocketFuelCalculation data = new RocketFuelCalculation();
-        for (int i : data.input) {
+        for (int i : input) {
             totalFuel += (i / 3 - 2);
+        }
+        return totalFuel;
+    }
+
+    public int getTotalFuelIncludingMassOfFuel() {
+        int totalFuel = 0;
+        for (int i : input) {
+            int fuel = 0;
+            while (i >= 0) {
+                i = (i / 3 - 2);
+                if (i > 0) fuel += i;
+            }
+            totalFuel += fuel;
         }
         return totalFuel;
     }
